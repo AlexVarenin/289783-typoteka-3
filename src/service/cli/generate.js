@@ -7,7 +7,7 @@ const FILE_SENTENCES_PATH = `./data/sentences.txt`;
 const FILE_TITLES_PATH = `./data/titles.txt`;
 const FILE_CATEGORIES_PATH = `./data/categories.txt`;
 
-const moment = require('moment');
+const moment = require(`moment`);
 
 const DEFAULT_COUNT = 1;
 const FILE_NAME = `mocks.json`;
@@ -18,7 +18,7 @@ const {
 } = require(`../../utils`);
 
 const generateDate = () => {
-  return moment(new Date()).subtract(getRandomInt(0, 3), 'months').format('YYYY-MM-DD hh:mm:ss');
+  return moment(new Date()).subtract(getRandomInt(0, 3), `months`).format(`YYYY-MM-DD hh:mm:ss`);
 };
 
 const readContent = async (filePath) => {

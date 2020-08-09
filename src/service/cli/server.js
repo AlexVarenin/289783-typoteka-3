@@ -1,3 +1,5 @@
+'use strict';
+
 const chalk = require(`chalk`);
 const http = require(`http`);
 const fs = require(`fs`).promises;
