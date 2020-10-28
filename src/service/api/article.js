@@ -6,7 +6,7 @@ const articleValidator = require(`../middlewares/article-validator`);
 const articleExist = require(`../middlewares/article-exists`);
 const commentValidator = require(`../middlewares/comment-validator`);
 
-module.exports = (app, articleService) => {
+module.exports = (app, articleService, commentService) => {
   const route = new Router();
 
   app.use(`/article`, route);
@@ -53,7 +53,7 @@ module.exports = (app, articleService) => {
 
   route.delete(`/:articleId`, (req, res) => {
     const {articleId} = req.params;
-    const article = offerService.drop(articleId);
+    const article = articleService.drop(articleId);
 
     if (!article) {
       return res.status(HttpCode.NOT_FOUND)
