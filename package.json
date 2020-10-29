@@ -5,6 +5,7 @@
   "main": "./src/service/service.js",
   "scripts": {
     "test": "npm run eslint && npm run jest",
+    "test::rest": "npm run jest",
     "jest": "jest",
     "eslint": "eslint --ext .js src/",
     "start": "node ./src/service/service.js",
