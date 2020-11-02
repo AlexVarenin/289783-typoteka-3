@@ -8,6 +8,7 @@ const commentValidator = require(`../middlewares/comment-validator`);
 
 module.exports = (app, articleService) => {
   const route = new Router();
+
   app.use(`/article`, route);
 
   route.get(`/`, (req, res) => {
